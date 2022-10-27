@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center my-3">CRUD PROJECT</h1>
+<div class="w-75 bg-dark m-auto p-5 text-white shadow-lg ">
+  
+    <label>Product Name</label>
+    <input type="text" class="form-control my-3" id="productName">
+    <!-- REGEX -->
+    <div id="nameAlert" class=" my-4 text-danger d-none">Product Name Should be from 2 to 15 characters</div>
+    <!--  -->
+    <label>Product Price</label>
+    <input type="number" class="form-control" id="productPrice">
+    <!--  -->
+    <label>Product Category</label>
+    <input type="text" class="form-control my-3" id="productCategory">
+    <!--  -->
+    <label>Product DESC</label>
+<textarea class="form-control" id="productDesc"></textarea>
+<!--  -->
+<button disabled id="addBtn" class="btn btn-primary my-4 float-end clearfix">add product</button>
+
+<!--  -->
+<div >
+    <input type="text"  id="searchInput" class="form-control " placeholder="Search by name ..">
+</div>
+<table class="table mt-5">
+    <thead class="text-white">
+        <th>Product Name</th>
+        <th>Product Price</th>
+
+        <th>Product Category</th>
+
+        <th>Product Descraption</th>
+        <th></th>
+        <th></th>
+
+    </thead>
+    <tbody id="tableBody" class="text-white">
+
+    </tbody>
+</table>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
