@@ -38,6 +38,7 @@ productBtn.onclick=function () {
 
   displayProduct();
   clearForm();
+  productName.classList.remove('is-valid')
 }
 
 //ADD PRODUCT
@@ -89,8 +90,9 @@ localStorage.setItem('productStorage' ,JSON.stringify(products) )
 function clearForm(){
     for (let i = 0; i < clearInputs.length; i++) {
         clearInputs[i].value = ''
-        
+     
     }
+    
 }
 
 //SEARCH 
@@ -142,7 +144,7 @@ function updateProduct() {
 }
 
 //REGEX
-productName.onkeyup=function(){
+productName.onkeyup=function (){
     let nameRejex =/^[A-Z][a-z\s]{2,15}$/
     if(nameRejex.test(productName.value)){ //valid
      productBtn.removeAttribute('disabled')
@@ -155,6 +157,8 @@ productName.onkeyup=function(){
     productName.classList.add('is-invalid')
     productName.classList.remove('is-valid')
     nameAlert.classList.remove('d-none')
+    
  }
+
     }
 
